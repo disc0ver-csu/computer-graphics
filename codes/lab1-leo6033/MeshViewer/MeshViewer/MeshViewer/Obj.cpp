@@ -37,6 +37,17 @@ Vector3 Cross(Vector3& one, Vector3& two)
 	return vCross;		
 }
 
+Vector3 Cross(const Vector3& one, const Vector3& two)
+{//计算两个向量的叉积
+	Vector3 vCross;
+
+	vCross.fX = ((one.fY * two.fZ) - (one.fZ * two.fY));
+	vCross.fY = ((one.fZ * two.fX) - (one.fX * two.fZ));
+	vCross.fZ = ((one.fX * two.fY) - (one.fY * two.fX));
+
+	return vCross;
+}
+
 CObj::CObj(void)
 {
 }
